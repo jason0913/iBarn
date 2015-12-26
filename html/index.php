@@ -57,14 +57,13 @@
                       <div class="searchRight pull-right">
                             <div class="input-group m-bot15">
                               <div class="input-group-btn">
-                                  <button class="btn btn-white" type="button"><?php echo t('全部'); ?></button>
                               </div>
                               <input type="text" class="form-control" id="search" name="search" value="<?php echo htmlspecialchars($_REQUEST['search'], ENT_NOQUOTES); ?>" placeholder="<?php echo t(''); ?>">
                               <input type="hidden" id="type" name="type" value="<?php echo (int)$_REQUEST['type']; ?>">
                           </div>
                           <button class="btn btn-success searchButton" type="submit">
                               <i class="icon-search"></i>
-                              <?php echo t('搜索'); ?>
+                              <?php echo t('查找'); ?>
                           </button>
                       </div>
                   </form>
@@ -122,7 +121,7 @@
                                         <div class="name" id="name"><?php echo t('名称'); ?><div class="seq"></div></div>
                                     </div>
                                     <div class="listTableTopR pull-right">
-                                        <div class="size" id="size"><?php echo t('大小'); ?><div class="seq"></div></div>
+                                        <div class="size" id="size"><?php echo t('文件大小'); ?><div class="seq"></div></div>
                                         <div class="updateTime" id="ctime"><?php echo t('上传时间'); ?><div class="seq"></div></div>
                                     </div>
                                 </div>
@@ -285,7 +284,7 @@
                               <h4 class="modal-title"><?php echo t('删除'); ?></h4>
                           </div>
                           <div class="modal-body pull-left">
-                              <div class="delText"><?php echo t('确定要删除吗？'); ?></div>
+                              <div class="delText"><?php echo t('确定删除？'); ?></div>
                           </div>
                           <div class="modal-footer">
                               <button type="button" class="btn btn-success" onclick="file.del();"><?php echo t('确定'); ?></button>
@@ -305,7 +304,7 @@
                               <div>
                                   <div class="modalTitleSmall pull-left"><?php echo t('名称');?>：</div>
                                   <div class="col-lg-10 marginB10 pull-left">
-                                      <input class="form-control" id="folderName" type="text" placeholder="<?php echo t('请输入名称'); ?>">
+                                      <input class="form-control" id="folderName" type="text" placeholder="<?php echo t('文件夹名称'); ?>">
                                   </div>
                               </div>
                           </div>
@@ -416,14 +415,14 @@
     function modalName(id, name) {
         if (!id) {
             if ($('input[name="squaredCheckbox"]:checked').length > 1) {
-                alert(file.lang('一次只能重命名一个资料'));
+                alert(file.lang('一次只能重命名一个文件'));
                 return false;
             }
             $('input[name="squaredCheckbox"]:checked').each(function(){
                 id = $(this).val();
             });
             if (!id) {
-                alert(file.lang('请选择要重命名的资料'));
+                alert(file.lang('请选择要重命名的文件'));
                 return false;
             }
             name = $('#aname_' + id).val();
@@ -449,7 +448,7 @@
         });
         var idstr = ids.join(',');
         if (!idstr) {
-            alert(file.lang('请选择要下载的文件'));
+            alert(file.lang('请选择所下载的文件'));
             return false;
         }
         href = '';

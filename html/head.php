@@ -7,7 +7,7 @@
     <meta name="keyword" content="iBarn">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>iBarn</title>
+    <title>WebDisk</title>
 
     <!-- Bootstrap core CSS -->
     <link href="lib/view/css/bootstrap.min.css" rel="stylesheet">
@@ -39,11 +39,11 @@
     <header class="header white-bg">
         <?php if (strtolower($_REQUEST['a']) != 'own' && strtolower($_REQUEST['m']) != 'user') { ?>
             <div class="sidebar-toggle-box">
-                <div data-original-title="<?php echo t('收起菜单'); ?>" data-placement="right" class="icon-reorder tooltips"></div>
+                <div data-original-title="<?php echo t('折叠菜单'); ?>" data-placement="right" class="icon-reorder tooltips"></div>
             </div>
         <?php } ?>
         <!--logo start-->
-        <div class="pull-left logo" title="iBarn"><a href="#">iBarn</a></div>
+        <div class="pull-left logo" title="iBarn"><a href="#">WebDisk</a></div>
         <div class="pull-left" style="margin-top: 40px;color: #ffffff;"><a href="javascript:;" onclick="Cookies.set('lang', 'zh');window.location.reload();" style="color: #ffffff;"></a>  <a href="javascript:;" onclick="Cookies.set('lang', 'en');window.location.reload();" style="color: #ffffff;"></a></div>
         <!--logo end-->
         <?php if ($userinfo) { ?>
