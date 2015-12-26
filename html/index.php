@@ -11,7 +11,7 @@
                             <div id="ucontainer">
                                 <button class="btn btn-info" type="button" id="pickfiles">
                                     <i class="icon-cloud-upload"></i>
-                                    <?php echo t('上传资料'); ?>
+                                    <?php echo t('上传文件'); ?>
                                 </button>
                             </div>
                         </li>
@@ -39,27 +39,27 @@
                                 <?php echo t('移动'); ?>
                             </button>
                         </li>
-                        <li id="share">
-                            <button class="btn btn-info" type="button" onclick="modalShare(0, 0);">
-                                <i class="icon-share"></i>
-                                <?php echo t('分享'); ?>
-                            </button>
-                        </li>
                         <li id="rename" <?php if ($_COOKIE['show'] != 'block') { ?>style="display: none;" <?php } ?>>
                             <button class="btn btn-danger" type="button" onclick="modalName(0, '');" data-toggle="modal">
                                 <i class="icon-edit"></i>
                                 <?php echo t('重命名'); ?>
                             </button>
                         </li>
+                        <li id="share">
+                            <button class="btn btn-info" type="button" onclick="modalShare(0, 0);">
+                                <i class="icon-share"></i>
+                                <?php echo t('分享'); ?>
+                            </button>
+                        </li>
                   </ul>
-<!--                  <h4 style="margin-left: 15px;margin-bottom: 20px;">如果觉得好，在<a target="_blank" href="https://github.com/zhimengzhe/iBarn">https://github.com/zhimengzhe/iBarn</a>上给颗星；欢迎参观主站：<a href="http://www.godeye.org">http://www.godeye.org</a></h4>-->
+<!--                  <h4 style="margin-left: 15px;margin-bottom: 20px;"><a target="_blank" href="https://github.com/zhimengzhe/iBarn">https://github.com/zhimengzhe/iBarn</a>：<a href="http://www.godeye.org">http://www.godeye.org</a></h4>-->
                   <form action="index.php" onsubmit="return file.check();">
                       <div class="searchRight pull-right">
                             <div class="input-group m-bot15">
                               <div class="input-group-btn">
                                   <button class="btn btn-white" type="button"><?php echo t('全部'); ?></button>
                               </div>
-                              <input type="text" class="form-control" id="search" name="search" value="<?php echo htmlspecialchars($_REQUEST['search'], ENT_NOQUOTES); ?>" placeholder="<?php echo t('搜你想要'); ?>">
+                              <input type="text" class="form-control" id="search" name="search" value="<?php echo htmlspecialchars($_REQUEST['search'], ENT_NOQUOTES); ?>" placeholder="<?php echo t(''); ?>">
                               <input type="hidden" id="type" name="type" value="<?php echo (int)$_REQUEST['type']; ?>">
                           </div>
                           <button class="btn btn-success searchButton" type="submit">
@@ -76,78 +76,6 @@
                   <input type="hidden" id="dpath" name="dpath">
                   <input type="hidden" id="sid" name="sid">
                   <input type="hidden" id="delid" name="delid">
-                  <div class="mainMenu">
-                      <a href="index.php?type=1">
-                      <section class="panel">
-                          <div class="symbol terques">
-                              <i class="icon-file-text"></i>
-                          </div>
-                          <div class="value">
-                              <h4><?php echo t('我的文档'); ?></h4>
-                          </div>
-                      </section>
-                      </a>
-                  </div>
-                  <div class="mainMenu">
-                      <a href="index.php?type=2">
-                      <section class="panel">
-                          <div class="symbol red">
-                              <i class="icon-picture"></i>
-                          </div>
-                          <div class="value">
-                              <h4><?php echo t('我的图片'); ?></h4>
-                          </div>
-                      </section>
-                      </a>
-                  </div>
-                  <div class="mainMenu">
-                      <a href="index.php?type=3">
-                      <section class="panel">
-                          <div class="symbol yellow">
-                              <i class="icon-music"></i>
-                          </div>
-                          <div class="value">
-                              <h4><?php echo t('我的音乐'); ?></h4>
-                          </div>
-                      </section>
-                      </a>
-                  </div>
-                  <div class="mainMenu">
-                      <a href="index.php?type=4">
-                      <section class="panel">
-                          <div class="symbol blue">
-                              <i class="icon-film"></i>
-                          </div>
-                          <div class="value">
-                              <h4><?php echo t('我的视频'); ?></h4>
-                          </div>
-                      </section>
-                      </a>
-                  </div>
-                  <div class="mainMenu">
-                      <a href="index.php?type=5">
-                      <section class="panel">
-                          <div class="symbol terques">
-                              <i class="icon-cloud-download"></i>
-                          </div>
-                          <div class="value">
-                              <h4><?php echo t('BT种子'); ?></h4>
-                          </div>
-                      </section>
-                      </a>
-                  </div>
-                  <div class="mainMenu">
-                      <a href="index.php?type=6">
-                      <section class="panel">
-                          <div class="symbol yellow">
-                              <i class="icon-folder-open-alt"></i>
-                          </div>
-                          <div class="value">
-                              <h4><?php echo t('其他'); ?></h4>
-                          </div>
-                      </section>
-                      </a>
-                  </div>
               </div>
               <!--state overview end-->
               <?php if ($_REQUEST['path']) { ?>

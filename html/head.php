@@ -82,49 +82,43 @@
                 <li <?php if (!$_REQUEST['m'] && !$_REQUEST['class'] && $_REQUEST['a'] != 'offer') { ?>class="on"<?php } ?>>
                     <a href="index.php">
                         <i class="icon-folder-close-alt"></i>
-                        <span><?php echo t('所有资料'); ?></span>
+                        <span><?php echo t('全部文件'); ?></span>
                     </a>
                 </li>
                 <li class="inMenu <?php if ($_REQUEST['type'] == 1) { ?>on<?php } ?>">
                     <a href="index.php?type=1">
                         &nbsp;<i class="icon-file-text"></i>
-                        <span>&nbsp;<?php echo t('我的文档'); ?></span>
+                        <span>&nbsp;<?php echo t('文档'); ?></span>
                     </a>
                 </li>
                 <li class="inMenu <?php if ($_REQUEST['type'] == 2) { ?>on<?php } ?>">
                     <a href="index.php?type=2">
                         <i class="icon-picture"></i>
-                        <span><?php echo t('我的图片'); ?></span>
+                        <span><?php echo t('图片'); ?></span>
                     </a>
                 </li>
                 <li class="inMenu <?php if ($_REQUEST['type'] == 3) { ?>on<?php } ?>">
                     <a href="index.php?type=3">
                         <i class="icon-music"></i>
-                        <span>&nbsp;<?php echo t('我的音乐'); ?></span>
+                        <span>&nbsp;<?php echo t('音乐'); ?></span>
                     </a>
                 </li>
                 <li class="inMenu <?php if ($_REQUEST['type'] == 4) { ?>on<?php } ?>">
                     <a href="index.php?type=4">
                         <i class="icon-film"></i>
-                        <span><?php echo t('我的视频'); ?></span>
+                        <span><?php echo t('视频'); ?></span>
                     </a>
                 </li>
                 <li class="inMenu <?php if ($_REQUEST['type'] == 5) { ?>on<?php } ?>">
                     <a href="index.php?type=5">
                         <i class="icon-download"></i>
-                        <span>&nbsp;<?php echo t('BT种子'); ?></span>
+                        <span>&nbsp;<?php echo t('压缩文件'); ?></span>
                     </a>
                 </li>
                 <li class="inMenu <?php if ($_REQUEST['type'] == 6) { ?>on<?php } ?>">
                     <a href="index.php?type=6">
                         <i class="icon-folder-open-alt"></i>
                         <span><?php echo t('其他'); ?></span>
-                    </a>
-                </li>
-                <li <?php if ($_REQUEST['m'] == 'collection') { ?>class="on"<?php } ?>>
-                    <a href="index.php?m=collection&a=getCollect">
-                        <i class="icon-star"></i>
-                        <span><?php echo t('我的收藏'); ?></span>
                     </a>
                 </li>
                 <li <?php if ($_REQUEST['m'] == 'share' && $_REQUEST['a'] == 'getMyShare') { ?>class="on"<?php } ?>>
@@ -137,18 +131,6 @@
                     <a href="index.php?m=share&a=getShareMe">
                         <i class="icon-retweet"></i>
                         <span><?php echo t('分享给我'); ?></span>
-                    </a>
-                </li>
-                <li <?php if ($_REQUEST['a'] == 'offer') { ?>class="on"<?php } ?>>
-                    <a href="index.php?a=offer">
-                        <i class="icon-gift"></i>
-                        <span><?php echo t('官方推荐'); ?></span>
-                    </a>
-                </li>
-                <li <?php if ($_REQUEST['m'] == 'share' && $_REQUEST['a'] == 'getPub') { ?>class="on"<?php } ?>>
-                    <a href="index.php?m=share&a=getPub">
-                        <i class="icon-rss"></i>
-                        <span><?php echo t('公共资源'); ?></span>
                     </a>
                 </li>
                 <li <?php if ($_REQUEST['class'] == 'recycle') { ?>class="on"<?php } ?>>
@@ -168,7 +150,7 @@
                 </div>
             </div>
             <div class="pull-left">
-                <span><?php echo $space['spaceFormat']; ?></span> / <?php echo $space['all']; ?> G
+                <span><?php echo t('已使用:'); echo $space['spaceFormat']; ?></span> / <?php echo $space['all']; ?> G
             </div>
         </div>
     </aside>
