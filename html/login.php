@@ -4,11 +4,11 @@
         <div class="col-lg-10">
             <div class="input-group m-top20">
                 <span class="input-group-addon"><i class="icon-user"></i></span>
-                <input type="text" name="userName" id="userName" placeholder="<?php echo t('请输入用户名'); ?>" class="logininput form-control input-lg">
+                <input type="text" name="userName" id="userName" placeholder="<?php echo t('用户名'); ?>" class="logininput form-control input-lg">
             </div>
             <div class="input-group m-top20">
                 <span class="input-group-addon"><i class="icon-unlock-alt"></i></span>
-                <input type="password" name="passWord" id="passWord" placeholder="<?php echo t('请输入密码'); ?>" class="logininput form-control input-lg">
+                <input type="password" name="passWord" id="passWord" placeholder="<?php echo t('密码'); ?>" class="logininput form-control input-lg">
             </div>
         </div>
         <div class="col-lg-10">
@@ -31,7 +31,7 @@
                     <a href="javascript:;" onclick="$('#rem, #loginbtn, #aregist').show();$('#registbtn, #alogin').hide();" style="color: #444;"><?php echo t('登录'); ?></a>
                 </label>
             </div>
-            <div style="color: #ffffff;float:left;margin-top: 23px;margin-left: 60px;"><a href="javascript:;" onclick="Cookies.set('lang', 'zh');window.location.reload();" style="color: #ffffff;">中文</a> | <a href="javascript:;" onclick="Cookies.set('lang', 'en');window.location.reload();" style="color: #ffffff;">English</a></div>
+            <div style="color: #ffffff;float:left;margin-top: 23px;margin-left: 60px;"><a href="javascript:;" onclick="Cookies.set('lang', 'zh');window.location.reload();" style="color: #ffffff;"></a>  <a href="javascript:;" onclick="Cookies.set('lang', 'en');window.location.reload();" style="color: #ffffff;"></a></div>
         </div>
     </div>
 </section>

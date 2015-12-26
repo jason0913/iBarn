@@ -44,7 +44,7 @@
         <?php } ?>
         <!--logo start-->
         <div class="pull-left logo" title="iBarn"><a href="#">iBarn</a></div>
-        <div class="pull-left" style="margin-top: 40px;color: #ffffff;"><a href="javascript:;" onclick="Cookies.set('lang', 'zh');window.location.reload();" style="color: #ffffff;">中文</a> | <a href="javascript:;" onclick="Cookies.set('lang', 'en');window.location.reload();" style="color: #ffffff;">English</a></div>
+        <div class="pull-left" style="margin-top: 40px;color: #ffffff;"><a href="javascript:;" onclick="Cookies.set('lang', 'zh');window.location.reload();" style="color: #ffffff;"></a>  <a href="javascript:;" onclick="Cookies.set('lang', 'en');window.location.reload();" style="color: #ffffff;"></a></div>
         <!--logo end-->
         <?php if ($userinfo) { ?>
         <div class="top-nav">
